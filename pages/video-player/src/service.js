@@ -6,12 +6,12 @@ const EAR_THRESHOLD = 0.27;
 
 export default class Service {
   #model = null
-  #faceLandmarksDetection = null
-  constructor({ faceLandmarksDetection }){
+  #faceLandmarksDetection
+  constructor({ faceLandmarksDetection }) {
     this.#faceLandmarksDetection = faceLandmarksDetection
   }
 
-  async loadModel(){
+  async loadModel() {
     this.#model = await this.#faceLandmarksDetection.load(
       this.#faceLandmarksDetection.SupportedPackages.mediapipeFacemesh,
       { maxFaces: 1 }
@@ -53,7 +53,7 @@ export default class Service {
       const leftEAR = this.#getEAR(upperLeft, lowerLeft);
 
       // True if the eye is closed
-      const blinked = leftEAR <= EAR_THRESHOLD && rightEAR <= EAR_THRESHOLD;
+      const blinked = leftEAR <= EAR_THRESHOLD && rightEAR <= EAR_THRESHOLD
 
       if(!blinked) continue
       if(!shouldRun()) continue
