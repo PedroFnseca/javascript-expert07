@@ -52,7 +52,7 @@ export default class Controller {
     this.#worker.send(img)
     this.log(`detecting eye blink...`)
 
-    setTimeout(() => this.loop(), 50)
+    setTimeout(() => this.loop(), 100)
   }
 
   log(text){
