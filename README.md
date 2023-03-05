@@ -11,6 +11,9 @@ Marque esse projeto com uma estrela 🌟
 
 - Este projeto foi criado usando Node.js v19.6
 
+## Live demo
+- Para testar o projeto final [clique aqui](https://pedrofnseca.github.io/javascript-expert07/pages/titles/)
+
 ## Running
 
 - Execute `npm ci` para restaurar os pacotes
